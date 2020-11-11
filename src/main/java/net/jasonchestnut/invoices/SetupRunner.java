@@ -23,6 +23,7 @@ public class SetupRunner implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
+            /*
         UUID uuid = UUID.fromString("8E74BED1-D7C0-4655-A528-0C9B67102C31"); 
         String supplier = new String("supplier_1");
         log.info("Created new UUID: " + uuid.toString());
@@ -37,6 +38,6 @@ public class SetupRunner implements CommandLineRunner {
         inv.setPaymentAmount(new BigDecimal(1000.0));
         this.repository.save(inv);
 
-        log.info("Db contains: " + this.repository.findBySupplierId(supplier));
+        log.info("Db contains: " + this.repository.findBySupplierId(supplier)); */
     }
 }
