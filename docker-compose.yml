@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  db:
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=invoices
+      - POSTGRES_USER=invoices
+      - POSTGRES_PASSWORD=invoices3
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db/invoices
+      SPRING_DATASOURCE_USERNAME: invoices
+      SPRING_DATASOURCE_PASSWORD: invoices3
+    depends_on:
+      - db
